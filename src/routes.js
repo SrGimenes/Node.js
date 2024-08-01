@@ -1,3 +1,4 @@
+import path from "node:path"
 import { DataBase } from "./database.js"
 import { randomUUID } from 'node:crypto'
 const database = new DataBase()
@@ -27,6 +28,13 @@ export const routes = [
             database.insert('users', user)
     
             return res.writeHead(201).end();
+        }
+    },
+    {
+        method: 'DELETE',
+        path: '/users/ID',
+        handler: (req, res) => {
+
         }
     }
 ]
