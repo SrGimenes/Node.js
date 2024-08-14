@@ -36,18 +36,6 @@ export class DataBase {
         return data;
     }
 
-    // insert(table, data) {
-    //     if (Array.isArray(this.#database[table])) {
-    //       this.#database[table].push(data)
-    //     } else {
-    //       this.#database[table] = [data]
-    //     }
-    
-    //     this.#persist()
-    
-    //     return data
-    //   }
-
     update(table, id, data){
         const rowIndex = this.#database[table].findIndex(row => row.id === id)
         
